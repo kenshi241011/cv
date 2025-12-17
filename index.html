@@ -577,15 +577,15 @@
     <div class="main-container">
         <div class="header-title">
             <div class="theme-controls">
-                <button class="theme-btn" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+                <button class="theme-btn" onclick="toggleDarkMode()">Modo Oscuro</button>
             </div>
-            <h1>📄 Generador de CV Profesional</h1>
+            <h1>Generador de CV Profesional</h1>
             <p>Crea tu currículum profesional en minutos</p>
         </div>
         
         <div class="content-wrapper">
             <div class="form-container">
-                <h2>✏️ Completa tus datos</h2>
+                <h2>Completa tus datos</h2>
                 
                 <div class="live-preview-toggle">
                     <label class="toggle-switch">
@@ -596,16 +596,16 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>🎨 Selecciona una plantilla</label>
+                    <label>Selecciona una plantilla</label>
                     <div class="template-selector">
                         <div class="template-option active" onclick="selectTemplate('classic')">
-                            📋 Clásico
+                            Clásico
                         </div>
                         <div class="template-option" onclick="selectTemplate('modern')">
-                            🚀 Moderno
+                            Moderno
                         </div>
                         <div class="template-option" onclick="selectTemplate('creative')">
-                            🎨 Creativo
+                            Creativo
                         </div>
                     </div>
                 </div>
@@ -615,46 +615,46 @@
                     <div class="file-upload">
                         <input type="file" id="photoInput" accept="image/*">
                         <label for="photoInput" class="file-upload-btn">
-                            📤 Subir foto (Formato carnet)
+                            Subir foto (Formato carnet)
                         </label>
                     </div>
                     <div class="photo-preview" id="photoPreview"></div>
                 </div>
                 
                 <div class="form-group">
-                    <label>👤 Nombre completo *</label>
-                    <input type="text" id="fullName" placeholder="Ej: Juan Carlos Pérez García" required oninput="validateAndSave()">
+                    <label>Nombre completo *</label>
+                    <input type="text" id="fullName" placeholder="Ej: Juan Carlos Pérez García" oninput="validateAndSave()">
                     <div class="error-message" id="fullNameError">El nombre es obligatorio</div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>📱 Número de teléfono *</label>
-                        <input type="text" id="phone" placeholder="Ej: 987654321" maxlength="9" required oninput="validatePhone(this); validateAndSave()">
+                        <label>Número de teléfono</label>
+                        <input type="text" id="phone" placeholder="Ej: 987654321" maxlength="9" oninput="validatePhone(this); validateAndSave()">
                         <div class="error-message" id="phoneError">Debe tener 9 dígitos</div>
                     </div>
                     
                     <div class="form-group">
-                        <label>🆔 DNI *</label>
-                        <input type="text" id="dni" placeholder="Ej: 12345678" maxlength="8" required oninput="validateDNI(this); validateAndSave()">
+                        <label>DNI</label>
+                        <input type="text" id="dni" placeholder="Ej: 12345678" maxlength="8" oninput="validateDNI(this); validateAndSave()">
                         <div class="error-message" id="dniError">Debe tener 8 dígitos</div>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label>📧 Correo electrónico *</label>
-                    <input type="email" id="email" placeholder="Ej: tucorreo@gmail.com" required oninput="validateEmail(this); validateAndSave()">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="email" placeholder="Ej: tucorreo@gmail.com" oninput="validateEmail(this); validateAndSave()">
                     <div class="error-message" id="emailError">Email inválido</div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>🎂 Fecha de nacimiento</label>
+                        <label>Fecha de nacimiento</label>
                         <input type="date" id="birthdate" oninput="validateAndSave()">
                     </div>
                     
                     <div class="form-group">
-                        <label>👔 Estado civil</label>
+                        <label>Estado civil</label>
                         <select id="civilStatus" oninput="validateAndSave()">
                             <option value="">Seleccionar...</option>
                             <option value="Soltero/a">Soltero/a</option>
@@ -666,28 +666,28 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>📍 Dirección</label>
+                    <label>Dirección</label>
                     <input type="text" id="address" placeholder="Ej: Av. Principal 123, Lima, Perú" oninput="validateAndSave()">
                 </div>
                 
                 <div class="form-group">
-                    <label>🔗 LinkedIn</label>
+                    <label>LinkedIn</label>
                     <input type="text" id="linkedin" placeholder="Ej: linkedin.com/in/tu-perfil" oninput="validateAndSave()">
                 </div>
                 
                 <div class="form-group">
-                    <label>💼 Portafolio / Sitio web</label>
+                    <label>Portafolio / Sitio web</label>
                     <input type="text" id="website" placeholder="Ej: www.tusitioweb.com" oninput="validateAndSave()">
                 </div>
                 
                 <div class="form-group">
-                    <label>💼 Perfil profesional / Sobre mí * <span class="char-counter" id="profileCounter">0/500</span></label>
+                    <label>Perfil profesional / Sobre mí <span class="char-counter" id="profileCounter">0/500</span></label>
                     <textarea id="profile" placeholder="Describe brevemente tu experiencia, habilidades y objetivo profesional...
-Ej: Profesional con 5 años de experiencia en atención al cliente y ventas. Orientado a resultados con excelentes habilidades de comunicación..." required maxlength="500" oninput="updateCounter(this, 'profileCounter'); validateAndSave()"></textarea>
+Ej: Profesional con 5 años de experiencia en atención al cliente y ventas. Orientado a resultados con excelentes habilidades de comunicación..." maxlength="500" oninput="updateCounter(this, 'profileCounter'); validateAndSave()"></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label>🎯 Objetivo profesional <span class="char-counter" id="objectiveCounter">0/300</span></label>
+                    <label>Objetivo profesional <span class="char-counter" id="objectiveCounter">0/300</span></label>
                     <div style="display: flex; gap: 10px; margin-bottom: 8px;">
                         <button class="ai-btn" onclick="generateObjective()" type="button">✨ Generar con IA</button>
                     </div>
@@ -696,7 +696,7 @@ Ej: Obtener un puesto en el área de ventas donde pueda aplicar mis habilidades 
                 </div>
                 
                 <div class="form-group">
-                    <label>🎓 Formación académica <span class="char-counter" id="educationCounter">0/600</span></label>
+                    <label>Formación académica <span class="char-counter" id="educationCounter">0/600</span></label>
                     <textarea id="education" placeholder="Escribe tu formación académica...
 Ej: 
 - Licenciado en Administración - Universidad Nacional (2018)
@@ -704,7 +704,7 @@ Ej:
                 </div>
                 
                 <div class="form-group">
-                    <label>💻 Experiencia laboral <span class="char-counter" id="experienceCounter">0/800</span></label>
+                    <label>Experiencia laboral <span class="char-counter" id="experienceCounter">0/800</span></label>
                     <textarea id="experience" placeholder="Describe tu experiencia laboral...
 Ej:
 - Asesor de ventas - Empresa XYZ (2020-2023)
@@ -713,7 +713,7 @@ Ej:
                 </div>
                 
                 <div class="form-group">
-                    <label>⚡ Habilidades <span class="char-counter" id="skillsCounter">0/400</span></label>
+                    <label>Habilidades <span class="char-counter" id="skillsCounter">0/400</span></label>
                     <div style="display: flex; gap: 10px; margin-bottom: 8px;">
                         <button class="ai-btn" onclick="generateSkills()" type="button">✨ Generar con IA</button>
                     </div>
@@ -722,7 +722,7 @@ Ej: Atención al cliente, Microsoft Office, Trabajo en equipo, Comunicación efe
                 </div>
                 
                 <div class="form-group">
-                    <label>🌐 Idiomas <span class="char-counter" id="languagesCounter">0/300</span></label>
+                    <label>Idiomas <span class="char-counter" id="languagesCounter">0/300</span></label>
                     <textarea id="languages" placeholder="Lista los idiomas que dominas y tu nivel...
 Ej:
 - Español: Nativo
@@ -731,7 +731,7 @@ Ej:
                 </div>
                 
                 <div class="form-group">
-                    <label>🏆 Certificaciones y cursos <span class="char-counter" id="certificationsCounter">0/500</span></label>
+                    <label>Certificaciones y cursos <span class="char-counter" id="certificationsCounter">0/500</span></label>
                     <textarea id="certifications" placeholder="Lista tus certificaciones y cursos relevantes...
 Ej:
 - Certificación en Marketing Digital - Google (2023)
@@ -739,7 +739,7 @@ Ej:
                 </div>
                 
                 <div class="form-group">
-                    <label>⭐ Logros destacados <span class="char-counter" id="achievementsCounter">0/400</span></label>
+                    <label>Logros destacados <span class="char-counter" id="achievementsCounter">0/400</span></label>
                     <textarea id="achievements" placeholder="Menciona tus logros más importantes...
 Ej:
 - Empleado del mes durante 6 meses consecutivos
@@ -748,7 +748,7 @@ Ej:
                 </div>
                 
                 <div class="form-group">
-                    <label>👥 Referencias <span class="char-counter" id="referencesCounter">0/400</span></label>
+                    <label>Referencias <span class="char-counter" id="referencesCounter">0/400</span></label>
                     <textarea id="references" placeholder="Referencias profesionales (opcional)...
 Ej:
 - María González - Gerente de Ventas - Empresa XYZ
@@ -757,12 +757,12 @@ Ej:
   Tel: 987654322 | Email: carlos@abc.com" maxlength="400" oninput="updateCounter(this, 'referencesCounter'); validateAndSave()"></textarea>
                 </div>
                 
-                <button class="generate-btn" onclick="generateCV()">🚀 Generar CV</button>
-                <button class="clear-btn" onclick="clearForm()">🗑️ Limpiar Formulario</button>
+                <button class="generate-btn" onclick="generateCV()">Generar CV</button>
+                <button class="clear-btn" onclick="clearForm()">Limpiar Formulario</button>
             </div>
             
             <div class="preview-container">
-                <h2>👁️ Vista previa del CV</h2>
+                <h2>Vista previa del CV</h2>
                 <div class="cv-preview" id="cvPreview">
                     <div class="empty-state">
                         <svg fill="currentColor" viewBox="0 0 20 20">
@@ -1021,24 +1021,9 @@ Ej:
             const achievements = document.getElementById('achievements').value;
             const references = document.getElementById('references').value;
             
-            if (!fullName || !phone || !dni || !email || !profile) {
-                alert('Por favor completa todos los campos obligatorios (*)');
-                return;
-            }
-            
-            if (phone.length !== 9) {
-                alert('El número de teléfono debe tener 9 dígitos');
-                return;
-            }
-            
-            if (dni.length !== 8) {
-                alert('El DNI debe tener 8 dígitos');
-                return;
-            }
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor ingresa un email válido');
+            // Validación mínima solo para campos realmente críticos
+            if (!fullName) {
+                alert('Por favor ingresa tu nombre completo');
                 return;
             }
             
@@ -1055,71 +1040,71 @@ Ej:
                 if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
                     age--;
                 }
-                ageHTML = `<div class="cv-info-item">🎂 ${age} años</div>`;
+                ageHTML = `<div class="cv-info-item">${age} años</div>`;
             }
             
-            const civilStatusHTML = civilStatus ? `<div class="cv-info-item">👔 ${civilStatus}</div>` : '';
-            const addressHTML = address ? `<div class="cv-info-item" style="grid-column: 1 / -1;">📍 ${address}</div>` : '';
+            const civilStatusHTML = civilStatus ? `<div class="cv-info-item">${civilStatus}</div>` : '';
+            const addressHTML = address ? `<div class="cv-info-item" style="grid-column: 1 / -1;">${address}</div>` : '';
             
             const socialLinks = [];
-            if (linkedin) socialLinks.push(`<a href="https://${linkedin}" target="_blank" style="color: #0077b5; text-decoration: none;">🔗 LinkedIn</a>`);
-            if (website) socialLinks.push(`<a href="https://${website}" target="_blank" style="color: #667eea; text-decoration: none;">🌐 Portfolio</a>`);
+            if (linkedin) socialLinks.push(`<a href="https://${linkedin}" target="_blank" style="color: #0077b5; text-decoration: none;">LinkedIn</a>`);
+            if (website) socialLinks.push(`<a href="https://${website}" target="_blank" style="color: #667eea; text-decoration: none;">Portfolio</a>`);
             const socialHTML = socialLinks.length > 0 
                 ? `<div class="cv-info-item" style="grid-column: 1 / -1;">${socialLinks.join(' | ')}</div>` 
                 : '';
             
             const objectiveHTML = objective 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">🎯 Objetivo Profesional</div>
+                    <div class="cv-section-title">Objetivo Profesional</div>
                     <p style="line-height: 1.6; text-align: justify;">${objective}</p>
                    </div>`
                 : '';
             
             const experienceHTML = experience 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">💼 Experiencia Laboral</div>
+                    <div class="cv-section-title">Experiencia Laboral</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${experience}</p>
                    </div>`
                 : '';
             
             const educationHTML = education 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">🎓 Formación Académica</div>
+                    <div class="cv-section-title">Formación Académica</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${education}</p>
                    </div>`
                 : '';
             
             const skillsHTML = skills 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">⚡ Habilidades</div>
+                    <div class="cv-section-title">Habilidades</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${skills}</p>
                    </div>`
                 : '';
             
             const languagesHTML = languages 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">🌐 Idiomas</div>
+                    <div class="cv-section-title">Idiomas</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${languages}</p>
                    </div>`
                 : '';
             
             const certificationsHTML = certifications 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">🏆 Certificaciones y Cursos</div>
+                    <div class="cv-section-title">Certificaciones y Cursos</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${certifications}</p>
                    </div>`
                 : '';
             
             const achievementsHTML = achievements 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">⭐ Logros Destacados</div>
+                    <div class="cv-section-title">Logros Destacados</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${achievements}</p>
                    </div>`
                 : '';
             
             const referencesHTML = references 
                 ? `<div class="cv-section">
-                    <div class="cv-section-title">👥 Referencias</div>
+                    <div class="cv-section-title">Referencias</div>
                     <p style="white-space: pre-line; line-height: 1.6;">${references}</p>
                    </div>`
                 : '';
@@ -1130,23 +1115,27 @@ Ej:
                     <h1 style="font-size: 32px; margin-bottom: 5px;">${fullName}</h1>
                 </div>
                 <div class="cv-content">
+                    ${phone || dni || email || ageHTML || civilStatusHTML || addressHTML || socialHTML ? `
                     <div class="cv-section">
-                        <div class="cv-section-title">📞 Datos de Contacto</div>
+                        <div class="cv-section-title">Datos de Contacto</div>
                         <div class="cv-info">
-                            <div class="cv-info-item">📱 ${phone}</div>
-                            <div class="cv-info-item">🆔 DNI: ${dni}</div>
+                            ${phone ? `<div class="cv-info-item">${phone}</div>` : ''}
+                            ${dni ? `<div class="cv-info-item">DNI: ${dni}</div>` : ''}
                             ${ageHTML}
                             ${civilStatusHTML}
-                            <div class="cv-info-item" style="grid-column: 1 / -1;">📧 ${email}</div>
+                            ${email ? `<div class="cv-info-item" style="grid-column: 1 / -1;">${email}</div>` : ''}
                             ${addressHTML}
                             ${socialHTML}
                         </div>
                     </div>
+                    ` : ''}
                     
+                    ${profile ? `
                     <div class="cv-section">
-                        <div class="cv-section-title">👨‍💼 Perfil Profesional</div>
+                        <div class="cv-section-title">Perfil Profesional</div>
                         <p style="line-height: 1.6; text-align: justify;">${profile}</p>
                     </div>
+                    ` : ''}
                     
                     ${objectiveHTML}
                     ${experienceHTML}
